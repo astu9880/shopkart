@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <script src="/javascript/jquery-3.1.1.js"></script>
+    <script src="/javascript/frontjs.js"></script>
+</head>
+<body>
+<br><br>
+    <div class="ui cards">
+        {{#each items}}
+            <div class="card">
+                <div class="content">
+                    <span class="item" style="cursor:pointer" id="{{id}}">
+                        <div class="header"><b>{{name}}</b></div>
+                        <div class="meta">&#8377;{{price}}</div>
+                    </span>
+                    <span hidden>{{name}}</span>
+                    <span hidden>{{price}}</span>
+
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <br>
+
+    <table class="ui celled padded table">
+        <thead>
+        <tr>
+            <th class="single line">Serial Number</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>
+                Quantity
+            </th>
+            <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody id="front-cart">
+
+        </tbody>
+    </table>
+</body>
+</html>
